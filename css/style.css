@@ -1,0 +1,14 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head h1
+{
+    color: rgb(185, 185, 185);
+}
+.book
+{
+    background-color:rgb(185, 185, 185) ;
+}

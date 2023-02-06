@@ -1,0 +1,64 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+<header>
+  <div class="container-fluid head  p-5">
+    <h1>Bookmarker</h1>
+    <hr>
+  </div>
+  
+</header>
+<section>
+  <div class="container book text-center w-75 m-auto  p-5 ">
+    <h2>Bookmark your favorite sites</h2>
+    <br>
+    <br>
+    <label for="">Site Name</label>
+    <br>
+    <br>
+    <input id="siteName" class="form-control" type="text">
+    <br>
+    <br>
+    <label for="siteUrl">Site URL</label>
+    <br>
+    <br>
+    <input id="siteUrl" class="form-control" type="text">
+    <br>
+    <br>
+    <button id="add" onclick="addbook()" class="btn btn-outline-dark">Submit</button>
+
+
+  </div>
+  <div class="container-fluid px-5">
+    <hr>
+  </div>
+  <div class="container">
+    <table class="table text-center">
+    <thead>
+      <th>Site Name</th>
+      <th>Site URL</th>
+      <th>Open Site</th>
+      <th>Delete Site</th>
+      <th>Update Site</th>
+    </thead>
+    <tbody id="tableBook">
+        
+    </tbody>
+    </table>
+  </div>
+</section>
+  
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
