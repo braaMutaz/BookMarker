@@ -1,5 +1,8 @@
 var siteName = document.getElementById('siteName');
 var siteUrl = document.getElementById('siteUrl');
+var notVal = document.getElementById('notVal');
+var notVal1 = document.getElementById('notVal1');
+console.log(notVal)
 console.log(siteName,siteUrl)
 var bookcontainer =[]
 var copy;
@@ -24,11 +27,14 @@ if(regx()==true)
   localStorage.setItem('bookmarker',JSON.stringify(bookcontainer))
   displaybook()
   clear()
+  notVal.style.display='none'
+  notVal1.style.display='none'
   console.log(bookcontainer)
 }
 else
 {
-  alert('Please enter the first uppercase letter and the number of characters must be from 3 to 8 characters')
+  notVal.style.display='block'
+  notVal1.style.display='block'
 }
 }
 else
@@ -83,7 +89,8 @@ function updatebook(i)
 function regx()
 {
   var regex = /^[A-Z][a-z]{3,8}$/
-  if(regex.test(siteName.value)==true)
+  var regex1 = /^https:/
+  if(regex.test(siteName.value)==true && regex1.test(siteUrl.value)==true)
   {
     return true
   }
@@ -92,3 +99,4 @@ function regx()
     return false
   }
 }
+
